@@ -15,11 +15,6 @@ catch() {
     exit "$1"
 }
 
-# To start we are just going to support interactive running, prompt for everything
-## https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash?page=1&tab=scoredesc#tab-top
-## In the long term support environment variables and script arguments for all required user input
-## 
-
 # Save these for later
 SCRIPT_NAME=$(basename -- "$0")
 DIR_NAME="$(dirname "$(realpath $0)")"
