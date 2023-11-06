@@ -183,17 +183,10 @@ daily basis. These checkpoints + snapshots can be used to restore your server
 from backup. 
 
 The script will automatically prune older snapshots and only keep a set number.
+Set the number of snapshots you wish to keep, below. See snapshot pricing here: 
+https://docs.digitalocean.com/products/images/snapshots/details/pricing/
 
-You can view your Snapshots in the DigitalOcean Console by going to 
-Images -> Snapshots -> Volumes.
 
-If you need to edit the maximum number of snapshots later, you can edit the 
-MAX_SNAPSHOTS variable in /p4/common/bin/daily-checkpoint-and-snapshot.sh
-
-To disable these automated snapshots edit the crontab of the perforce user and 
-comment out the daily-checkpoint-and-snapshot.sh entry 
-IMPORTANT: un-comment the daily_checkpoint.sh entry so you at least get 
-checkpoint backups without snapshots.
 
 
 BACKUP_USAGE
@@ -253,7 +246,7 @@ ADVANCED USERS ONLY:
 To disable or change the timing of these automated snapshots edit the crontab of
 the perforce user and comment out the daily-checkpoint-and-snapshot.sh entry
 crontab -e
-IMPORTANT: un-comment the daily_checkpoint.sh entry before this one so you at 
+Then un-comment the daily_checkpoint.sh entry before this one so you at 
 least get checkpoints and journal rotations.
 
 This script will now prevent itself from being run again.
