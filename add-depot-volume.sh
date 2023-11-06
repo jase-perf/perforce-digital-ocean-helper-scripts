@@ -243,11 +243,11 @@ If you need to edit the maximum number of snapshots later, you can edit the
 MAX_SNAPSHOTS variable in /p4/common/bin/daily-checkpoint-and-snapshot.sh
 
 ADVANCED USERS ONLY:
-To disable or change the timing of these automated snapshots edit the crontab of
-the perforce user and comment out the daily-checkpoint-and-snapshot.sh entry
-crontab -e
-Then un-comment the daily_checkpoint.sh entry before this one so you at 
-least get checkpoints and journal rotations.
+  To disable or change the timing of these automated snapshots edit the crontab of
+  the perforce user and comment out the daily-checkpoint-and-snapshot.sh entry via
+  crontab -e
+  Then un-comment the daily_checkpoint.sh entry before this one so you at 
+  least get checkpoints and journal rotations.
 
 This script will now prevent itself from being run again.
 
